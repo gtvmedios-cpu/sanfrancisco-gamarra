@@ -7,6 +7,6 @@ export async function createClient() {
   if (!url || !key) return null;
   return createServerClient(url, key, { cookies: {
     getAll() { return cookieStore.getAll(); },
-    setAll(cookiesToSet) { try { cookiesToSet.forEach(({ name, value, options }) => cookieStore.set(name, value, options)); } catch {} }
+    setAll(cookiesToSet: Array<{ name: string; value: string; options: any }>) { try { cookiesToSet.forEach(({ name, value, options }) => cookieStore.set(name, value, options)); } catch {} }
   }});
 }
