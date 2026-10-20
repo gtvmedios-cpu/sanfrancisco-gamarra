@@ -99,3 +99,31 @@
 .program-back{max-width:900px;margin:28px auto 0;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
 .program-back a{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:#8b6b3e}
 @media(max-width:760px){.program-content{padding-top:50px;padding-bottom:58px}.program-day-heading{padding:18px;gap:15px}.program-day-heading h2{font-size:23px}.program-date-number{width:65px;min-width:65px;height:76px}.program-items{padding:0 18px}.program-item{grid-template-columns:1fr;gap:8px;padding:17px 0}.program-note{padding:19px}.program-back{align-items:flex-start;flex-direction:column}}
+
+/* Cuenta regresiva y programación visible en la portada */
+.countdown-band{background:#29352b;color:#fffdf8;border-top:3px solid #b89451;padding:31px 0}
+.countdown-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.countdown-copy .date-label{color:#d0b27a}
+.countdown-copy h2{font-family:'Playfair Display',serif;font-weight:500;font-size:clamp(25px,3vw,36px);margin:9px 0 8px}
+.countdown-copy p{font-size:12px;line-height:1.7;color:#d1cec4;margin:0;max-width:500px}
+.countdown-clock{display:flex;gap:10px;flex-wrap:wrap}
+.countdown-unit{min-width:76px;padding:12px 10px;text-align:center;border:1px solid #76684e;background:rgba(255,255,255,.035)}
+.countdown-unit strong{display:block;font-family:'Playfair Display',serif;font-weight:500;font-size:32px;line-height:1.1;color:#e2c58f;font-variant-numeric:tabular-nums}
+.countdown-unit span{display:block;margin-top:7px;font-size:8px;letter-spacing:1.3px;color:#d8d1c3}
+.countdown-started{display:flex;align-items:center;gap:10px;color:#e2c58f;font-family:'Playfair Display',serif;font-size:22px}
+.home-agenda-days{display:grid;gap:17px}
+.home-agenda-day{display:grid;grid-template-columns:125px 1fr;border:1px solid var(--line);background:#fffdf9}
+.home-agenda-date{background:#f5eee2;border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:22px 10px;color:#967644}
+.home-agenda-date span,.home-agenda-date small{font-size:9px;letter-spacing:1.4px}
+.home-agenda-date strong{font-family:'Playfair Display',serif;font-size:48px;font-weight:500;line-height:1.15}
+.home-agenda-details{padding:22px 27px}
+.home-agenda-details h3{font-family:'Playfair Display',serif;font-size:24px;font-weight:500;margin:0 0 15px;color:#553a2d}
+.home-agenda-event{display:grid;grid-template-columns:115px 1fr;gap:12px;padding:13px 0;border-top:1px solid #eee6d9}
+.home-agenda-event time{font-size:11px;font-weight:700;color:#967644}
+.home-agenda-event b{font-size:12px;font-weight:600}
+.home-agenda-event p{font-size:11px;color:var(--muted);margin:5px 0 0;line-height:1.6}
+.agenda-confirmation{display:flex;align-items:flex-start;gap:12px;padding:16px 18px;background:#f7f2e8;color:#806c4a;border:1px solid #e8dfd0}
+.agenda-confirmation svg{flex:none;margin-top:2px}
+.agenda-confirmation p{font-size:11px;line-height:1.7;margin:0}
+.agenda-more{display:flex;justify-content:flex-end;margin-top:4px}
+@media(max-width:760px){.countdown-inner{align-items:flex-start;flex-direction:column}.countdown-clock{width:100%;gap:7px}.countdown-unit{flex:1;min-width:calc(25% - 7px);padding:10px 4px}.countdown-unit strong{font-size:25px}.countdown-unit span{font-size:7px;letter-spacing:.7px}.home-agenda-day{grid-template-columns:75px 1fr}.home-agenda-date{padding:15px 5px}.home-agenda-date span,.home-agenda-date small{font-size:7px;letter-spacing:.5px}.home-agenda-date strong{font-size:35px}.home-agenda-details{padding:18px 14px}.home-agenda-details h3{font-size:20px}.home-agenda-event{grid-template-columns:1fr;gap:5px}.agenda-more{justify-content:stretch}.agenda-more .button{width:100%}}
