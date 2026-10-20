@@ -102,3 +102,17 @@ La portada y la sección de invitación usan representaciones artísticas de San
 - [Francis of Assisi - Cimabue](https://commons.wikimedia.org/wiki/File:Francis_of_Assisi_-_Cimabue.jpg)
 
 El texto de invitación identifica a la Parroquia Inmaculada Concepción de Gamarra, Cesar, y a la Comunidad Franciscana, Provincia de la Santa Fe, como entidades invitantes. El pie de página conserva el crédito “Creada por Gamarra TV”.
+
+## 8. Icono de pestaña y posicionamiento en Google
+
+El proyecto incluye metadatos SEO en `app/layout.tsx`, además de las rutas automáticas `/robots.txt` y `/sitemap.xml`. El emblema oficial se utiliza como icono de pestaña y como imagen para compartir enlaces. Google puede tardar días o semanas en rastrear e indexar el sitio; estos ajustes no garantizan una posición concreta.
+
+1. En Vercel, abre **Settings → Environment Variables** y agrega `NEXT_PUBLIC_SITE_URL` con la URL pública exacta del sitio, incluyendo `https://` y sin una barra final. Por ejemplo: `https://tu-dominio.vercel.app`. Si tienes un dominio propio, utiliza ese dominio.
+2. Guarda el cambio y haz un nuevo despliegue (**Redeploy**).
+3. Abre `https://TU-DOMINIO/robots.txt` y `https://TU-DOMINIO/sitemap.xml` para comprobar que las rutas estén disponibles.
+4. Entra en [Google Search Console](https://search.google.com/search-console/), añade el dominio o prefijo de URL y completa la verificación de propiedad.
+5. En Search Console, abre **Sitemaps**, escribe `sitemap.xml` y pulsa **Enviar**.
+6. En **Inspección de URLs**, introduce la dirección de la página principal y pulsa **Solicitar indexación**.
+7. Asegúrate de que el sitio sea público y que no tenga una contraseña de acceso. Para que Google pueda mostrar el icono, el emblema debe ser accesible públicamente por HTTPS.
+
+Importante: el dominio de ejemplo configurado como respaldo debe reemplazarse por la URL real del proyecto. El valor de `NEXT_PUBLIC_SITE_URL` evita que los enlaces canónicos y el sitemap señalen a un dominio equivocado.
