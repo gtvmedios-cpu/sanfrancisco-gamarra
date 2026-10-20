@@ -94,3 +94,11 @@ supabase/schema.sql        Tablas, índices y políticas RLS
 - Las imágenes se guardan como URL, no se cargan directamente al almacenamiento de Supabase en esta versión.
 - Haz pruebas con un elemento borrador y otro publicado antes de anunciar el enlace.
 - La programación se muestra vacía hasta que la parroquia incorpore y publique los horarios oficiales. No se inventaron horarios ni lugares.
+
+
+## Imágenes de San Francisco e invitación
+La portada y la sección de invitación usan representaciones artísticas de San Francisco de Asís alojadas en Wikimedia Commons. No deben presentarse como fotografías de la reliquia real. Las obras indicadas son reproducciones de obras de dominio público; revisa las páginas de cada archivo para los detalles de atribución y condiciones aplicables en tu jurisdicción:
+- [Saint Francis of Assisi by Jusepe de Ribera](https://commons.wikimedia.org/wiki/File:Saint_Francis_of_Assisi_by_Jusepe_de_Ribera.jpg)
+- [Francis of Assisi - Cimabue](https://commons.wikimedia.org/wiki/File:Francis_of_Assisi_-_Cimabue.jpg)
+
+El texto de invitación identifica a la Parroquia Inmaculada Concepción de Gamarra, Cesar, y a la Comunidad Franciscana, Provincia de la Santa Fe, como entidades invitantes. El pie de página conserva el crédito “Creada por Gamarra TV”.
