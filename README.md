@@ -125,3 +125,9 @@ Se añadieron estas rutas:
 - `/programacion`: agenda de la visita por día, del 2 al 4 de noviembre de 2026.
 
 La página principal incluye enlaces a ambas subpáginas y el sitemap las anuncia a los buscadores. Antes de publicar, la parroquia debe confirmar los horarios con el afiche oficial; las confesiones aparecen sin hora especificada en el contenido recibido.
+
+## Actualización de identidad y contenido (octubre de 2026)
+- Se actualizó el mensaje principal a «San Francisco de Asís, semilla de Vida Eterna».
+- Se incorporó el texto de presentación de la peregrinación y se aclaró que invitan la Parroquia Inmaculada Concepción de Gamarra, Cesar, y la Comunidad Franciscana, Provincia de la Santa Fe.
+- Se añadieron los afiches oficiales de referencia en `public/images/afiche-peregrinacion-san-francisco.png` y `public/images/fechas-peregrinacion.png` para su uso en la página o galería.
+- Se actualizaron los metadatos generales del sitio.
