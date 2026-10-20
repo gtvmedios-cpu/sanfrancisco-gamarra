@@ -116,3 +116,12 @@ El proyecto incluye metadatos SEO en `app/layout.tsx`, además de las rutas auto
 7. Asegúrate de que el sitio sea público y que no tenga una contraseña de acceso. Para que Google pueda mostrar el icono, el emblema debe ser accesible públicamente por HTTPS.
 
 Importante: el dominio de ejemplo configurado como respaldo debe reemplazarse por la URL real del proyecto. El valor de `NEXT_PUBLIC_SITE_URL` evita que los enlaces canónicos y el sitemap señalen a un dominio equivocado.
+
+
+## Historia y programación en páginas independientes
+
+Se añadieron estas rutas:
+- `/historia-san-francisco`: historia, conversión, fraternidad franciscana, amor por la creación y legado del santo.
+- `/programacion`: agenda de la visita por día, del 2 al 4 de noviembre de 2026.
+
+La página principal incluye enlaces a ambas subpáginas y el sitemap las anuncia a los buscadores. Antes de publicar, la parroquia debe confirmar los horarios con el afiche oficial; las confesiones aparecen sin hora especificada en el contenido recibido.

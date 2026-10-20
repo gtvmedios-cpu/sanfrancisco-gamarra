@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
   ? process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '')
   : process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
-    : 'https://visita-reliquia-san-francisco-gamarra.vercel.app';
+    : 'https://sanfrancisco-gamarra-cesar.vercel.app';
 
 export default function robots(): MetadataRoute.Robots {
   return {

@@ -42,3 +42,60 @@
 .footer-credit img{width:27px;height:27px;object-fit:contain;border-radius:50%;background:#fffdf8;padding:2px}
 .footer-credit strong{color:#e2c58f;font-weight:600}
 @media(max-width:760px){.partners-section{padding-top:58px;padding-bottom:58px}.partners-grid{grid-template-columns:1fr;gap:14px}.partner-card{padding:20px}.partner-logo{height:120px}.partner-logo img{max-height:112px}.footer-credit{flex-wrap:wrap}}
+
+/* Páginas interiores: historia y programación */
+.history-hero{position:relative;overflow:hidden;color:#fff;background:#553a2d url('https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Francis_of_Assisi_by_Jusepe_de_Ribera.jpg?width=1800') 65% 38%/cover no-repeat}
+.history-hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(43,31,23,.94),rgba(48,37,27,.76) 55%,rgba(41,53,43,.25))}
+.history-hero-content{position:relative;padding-top:84px;padding-bottom:78px}
+.history-hero h1{font-family:'Playfair Display',serif;font-size:clamp(48px,7vw,76px);font-weight:500;line-height:1.04;margin:24px 0 18px}
+.history-hero h1 em{color:#e2c58f;font-weight:500}
+.history-hero-content>p{max-width:620px;color:#eee4d5;line-height:1.85;font-size:15px}
+.history-facts{display:flex;flex-wrap:wrap;gap:22px;margin-top:27px;color:#e8d8b7;font-size:12px}
+.history-facts span{display:flex;align-items:center;gap:8px}
+.history-content{padding-top:72px;padding-bottom:80px}
+.history-intro{max-width:790px;margin:0 auto 50px;text-align:center}
+.history-intro h2,.history-chapter h2,.history-relic h2{font-family:'Playfair Display',serif;font-size:clamp(29px,4vw,39px);font-weight:500;line-height:1.2;margin:0 0 18px}
+.history-intro>p,.history-chapter p,.history-relic p{font-size:14px;line-height:1.95;color:#69685f}
+.history-chapter{display:grid;grid-template-columns:64px 1fr;gap:24px;max-width:850px;margin:0 auto;padding:30px 0;border-top:1px solid var(--line)}
+.history-chapter-icon{width:58px;height:58px;display:grid;place-items:center;border:1px solid #ddcba9;color:#a1814b;border-radius:50%}
+.history-number{font-size:10px;letter-spacing:1.6px;color:#9a7845;font-weight:700}
+.history-chapter h2{font-size:28px;margin:10px 0 12px}
+.history-chapter p{margin:0 0 13px}
+.history-quote{max-width:850px;margin:38px auto 52px;text-align:center;padding:40px 24px;background:#29352b;color:#fff;border:1px solid #79694e}
+.history-quote>span{font-size:10px;letter-spacing:2px;color:#d0b27a}
+.history-quote blockquote{font-family:'Playfair Display',serif;font-size:clamp(25px,4vw,36px);font-style:italic;line-height:1.35;margin:20px 0 12px}
+.history-quote p{font-size:11px;color:#cbc9c0}
+.history-relic{display:grid;grid-template-columns:64px 1fr;gap:24px;max-width:850px;margin:0 auto;padding:34px;background:#f7f1e6;border:1px solid #e8dfd0}
+.history-relic-icon{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#fffdf8;color:#a1814b;border:1px solid #ddcba9}
+.history-relic .button{margin-top:10px}
+@media(max-width:760px){.history-hero-content{padding-top:62px;padding-bottom:58px}.history-facts{flex-direction:column;gap:12px}.history-content{padding-top:52px;padding-bottom:55px}.history-chapter,.history-relic{grid-template-columns:1fr;gap:14px}.history-chapter-icon,.history-relic-icon{width:48px;height:48px}.history-relic{padding:23px}.history-chapter h2{font-size:25px}}
+
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.button-outline-light{border:1px solid rgba(238,225,201,.65);color:#fff;padding:14px 18px}
+.button-outline-light:hover{background:rgba(255,255,255,.1)}
+@media(max-width:760px){.hero-actions{align-items:stretch;flex-direction:column;width:max-content;max-width:100%}}
+
+.program-content{padding-top:70px;padding-bottom:85px}
+.program-intro{max-width:720px;margin:0 auto 42px;text-align:center}
+.program-intro h2{font-family:'Playfair Display',serif;font-size:clamp(29px,4vw,42px);font-weight:500;line-height:1.2;margin:0 0 15px}
+.program-intro p{font-size:13px;line-height:1.85;color:var(--muted)}
+.program-days{max-width:900px;margin:auto}
+.program-day{border:1px solid var(--line);margin-bottom:22px;background:#fffdf9}
+.program-day-heading{display:flex;align-items:center;gap:23px;padding:23px 27px;background:#f5eee2;border-bottom:1px solid var(--line)}
+.program-date-number{width:76px;min-width:76px;height:84px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fffdf8;border:1px solid #e0d1b5}
+.program-date-number span,.program-date-number small{font-size:9px;letter-spacing:1px;color:#8b6b3e}
+.program-date-number b{font-family:'Playfair Display',serif;font-size:35px;font-weight:500;line-height:1.1;color:#9a7845}
+.program-day-heading h2{font-family:'Playfair Display',serif;font-size:27px;font-weight:500;margin:6px 0 0}
+.program-items{padding:4px 27px}
+.program-item{display:grid;grid-template-columns:190px 1fr;gap:22px;padding:20px 0;border-bottom:1px solid var(--line)}
+.program-item:last-child{border-bottom:0}
+.program-time{display:flex;align-items:flex-start;gap:9px;font-size:12px;font-weight:600;color:#967644;padding-top:2px}
+.program-item h3{font-family:'Playfair Display',serif;font-size:19px;font-weight:500;margin:0 0 6px}
+.program-item p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+.program-note{max-width:900px;margin:28px auto;display:flex;gap:17px;padding:23px;background:#29352b;color:#f5f0e5}
+.program-note>svg{flex:none;color:#d0b27a}
+.program-note p{margin:7px 0;color:#e0ded6;font-size:12px;line-height:1.7}
+.program-note small{color:#c4c1b6;font-size:11px;line-height:1.7}
+.program-back{max-width:900px;margin:28px auto 0;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.program-back a{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:#8b6b3e}
+@media(max-width:760px){.program-content{padding-top:50px;padding-bottom:58px}.program-day-heading{padding:18px;gap:15px}.program-day-heading h2{font-size:23px}.program-date-number{width:65px;min-width:65px;height:76px}.program-items{padding:0 18px}.program-item{grid-template-columns:1fr;gap:8px;padding:17px 0}.program-note{padding:19px}.program-back{align-items:flex-start;flex-direction:column}}

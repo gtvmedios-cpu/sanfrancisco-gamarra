@@ -5,7 +5,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
   ? process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '')
   : process.env.VERCEL_URL
     ? `https://${process.env.VERCEL_URL}`
-    : 'https://visita-reliquia-san-francisco-gamarra.vercel.app';
+    : 'https://sanfrancisco-gamarra-cesar.vercel.app';
 
 const emblemUrl = 'https://i.ibb.co/B5vCnJZ2/Emblema-de-la-Reliquia-de-San-Francisco.png';
 
