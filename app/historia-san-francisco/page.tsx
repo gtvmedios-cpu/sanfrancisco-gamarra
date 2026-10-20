@@ -11,7 +11,7 @@ export default function HistoriaSanFranciscoPage() {
   return <main className="history-page">
     <div className="topline"><span>PARROQUIA · GAMARRA, CESAR</span><span>2 — 4 NOVIEMBRE 2026</span></div>
     <header className="nav wrap">
-      <Link className="brand" href="/"><img className="official-emblem official-emblem-nav" src="https://i.ibb.co/B5vCnJZ2/Emblema-de-la-Reliquia-de-San-Francisco.png" alt="Emblema oficial de la visita de la Reliquia de San Francisco de Asís"/><span><b>VISITA FRANCISCANA</b><small>Reliquia de San Francisco de Asís</small></span></Link>
+      <Link className="brand" href="/"><img className="official-emblem official-emblem-nav" src="https://i.ibb.co/DHK3vcBK/88ee063a-fe45-4a46-a092-a226465ca87e.jpg" alt="Emblema oficial de la visita de la Reliquia de San Francisco de Asís"/><span><b>VISITA FRANCISCANA</b><small>Reliquia de San Francisco de Asís</small></span></Link>
       <nav><Link href="/">Inicio</Link><Link href="/programacion">Programación</Link><Link href="/historia-san-francisco" aria-current="page">Historia del santo</Link></nav>
       <Link className="nav-cta" href="/programacion">Ver programación <ArrowUpRight size={16}/></Link>
     </header>
@@ -63,6 +63,6 @@ export default function HistoriaSanFranciscoPage() {
         <Link className="button button-gold" href="/programacion">Consultar programación <ArrowUpRight size={17}/></Link></div>
       </section>
     </article>
-    <footer><div className="wrap footer-main"><Link className="brand footer-brand" href="/"><img className="official-emblem official-emblem-footer" src="https://i.ibb.co/B5vCnJZ2/Emblema-de-la-Reliquia-de-San-Francisco.png" alt="Emblema oficial de la visita"/><span><b>VISITA FRANCISCANA</b><small>Reliquia de San Francisco de Asís</small></span></Link><p>Visita de la reliquia de San Francisco de Asís<br/>Gamarra, Cesar · 2 al 4 de noviembre de 2026</p><Link href="/">Volver al inicio ↑</Link></div><div className="wrap footer-bottom"><span>Información de la visita franciscana.</span><span className="footer-credit"><span>Creada por</span><img src="https://i.ibb.co/gGgdZ6x/Chat-GPT-Image-14-may-2026-18-57-48.png" alt="Logo de Gamarra TV" loading="lazy"/><strong>Gamarra TV</strong></span></div></footer>
+    <footer><div className="wrap footer-main"><Link className="brand footer-brand" href="/"><img className="official-emblem official-emblem-footer" src="https://i.ibb.co/DHK3vcBK/88ee063a-fe45-4a46-a092-a226465ca87e.jpg" alt="Emblema oficial de la visita"/><span><b>VISITA FRANCISCANA</b><small>Reliquia de San Francisco de Asís</small></span></Link><p>Visita de la reliquia de San Francisco de Asís<br/>Gamarra, Cesar · 2 al 4 de noviembre de 2026</p><Link href="/">Volver al inicio ↑</Link></div><div className="wrap footer-bottom"><span>Información de la visita franciscana.</span><span className="footer-credit"><span>Creada por</span><img src="https://i.ibb.co/gGgdZ6x/Chat-GPT-Image-14-may-2026-18-57-48.png" alt="Logo de Gamarra TV" loading="lazy"/><strong>Gamarra TV</strong></span></div></footer>
   </main>;
 }

@@ -7,7 +7,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
     ? `https://${process.env.VERCEL_URL}`
     : 'https://sanfrancisco-gamarra-cesar.vercel.app';
 
-const emblemUrl = 'https://i.ibb.co/B5vCnJZ2/Emblema-de-la-Reliquia-de-San-Francisco.png';
+const emblemUrl = 'https://i.ibb.co/DHK3vcBK/88ee063a-fe45-4a46-a092-a226465ca87e.jpg';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   publisher: 'Parroquia Inmaculada Concepción de Gamarra y Comunidad Franciscana, Provincia de la Santa Fe',
   alternates: { canonical: '/' },
   icons: {
-    icon: [{ url: emblemUrl, type: 'image/png' }],
+    icon: [{ url: emblemUrl, type: 'image/jpeg' }],
     shortcut: [emblemUrl],
-    apple: [{ url: emblemUrl, type: 'image/png' }],
+    apple: [{ url: emblemUrl, type: 'image/jpeg' }],
   },
   openGraph: {
     type: 'website',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: 'Visita de la Reliquia de San Francisco de Asís a Gamarra | 2 al 4 de noviembre de 2026',
     description:
       'Conoce la invitación, programación y noticias de la visita de la reliquia de San Francisco de Asís a Gamarra, Cesar, del 2 al 4 de noviembre de 2026.',
-    images: [{ url: emblemUrl, width: 1200, height: 1200, alt: 'Emblema oficial de la visita de la reliquia de San Francisco de Asís a Gamarra' }],
+    images: [{ url: emblemUrl, width: 1200, height: 1200, type: 'image/jpeg', alt: 'Emblema oficial de la visita de la reliquia de San Francisco de Asís a Gamarra' }],
   },
   twitter: {
     card: 'summary_large_image',

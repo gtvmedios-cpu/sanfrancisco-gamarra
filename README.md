@@ -131,3 +131,8 @@ La página principal incluye enlaces a ambas subpáginas y el sitemap las anunci
 - Se incorporó el texto de presentación de la peregrinación y se aclaró que invitan la Parroquia Inmaculada Concepción de Gamarra, Cesar, y la Comunidad Franciscana, Provincia de la Santa Fe.
 - Se añadieron los afiches oficiales de referencia en `public/images/afiche-peregrinacion-san-francisco.png` y `public/images/fechas-peregrinacion.png` para su uso en la página o galería.
 - Se actualizaron los metadatos generales del sitio.
+
+
+## Actualización del emblema oficial
+
+El emblema principal, los logotipos de cabecera y pie de página, el favicon y las imágenes de metadatos usan el nuevo logo proporcionado por la organización: https://i.ibb.co/DHK3vcBK/88ee063a-fe45-4a46-a092-a226465ca87e.jpg. La imagen se sirve desde ese enlace externo.
