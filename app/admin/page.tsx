@@ -1,0 +1,4 @@
+import { redirect } from 'next/navigation';
+import { createClient } from '@/lib/supabase/server';
+import AdminDashboard from '@/components/admin-dashboard';
+export default async function AdminPage(){const supabase=await createClient();if(!supabase) return <main className="admin-wrap"><div className="admin-card"><h1 className="admin-title">Configura Supabase</h1><p>Agrega las variables de entorno para habilitar el panel administrativo.</p><a href="/">Volver al sitio</a></div></main>;const {data:{user}}=await supabase.auth.getUser();if(!user)redirect('/admin/login');if(user.app_metadata?.role!=='admin')return <main className="admin-wrap"><div className="admin-card"><h1 className="admin-title">Acceso no autorizado</h1><p>Esta cuenta no tiene permisos de administración. Solicita al responsable técnico que habilite el rol de administrador.</p><a href="/">Volver al sitio</a></div></main>;return <AdminDashboard email={user.email??''}/>}

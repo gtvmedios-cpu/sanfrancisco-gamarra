@@ -1,0 +1,8 @@
+'use client';
+import { FormEvent, useState } from 'react';
+import { createClient } from '@/lib/supabase/browser';
+export default function LoginPage(){
+ const [email,setEmail]=useState(''); const [password,setPassword]=useState(''); const [error,setError]=useState(''); const [busy,setBusy]=useState(false);
+ async function submit(e:FormEvent){e.preventDefault();setBusy(true);setError('');try{const supabase=createClient();const {error}=await supabase.auth.signInWithPassword({email,password});if(error)throw error;window.location.href='/admin';}catch(err){setError(err instanceof Error?err.message:'No fue posible iniciar sesión.');}finally{setBusy(false)}}
+ return <main className="admin-wrap"><a href="/" className="brand"><span className="brandmark">✝</span><span><b>CAMINO DE FE</b><small>Administración del sitio</small></span></a><div className="login-card"><div className="section-kicker">ACCESO RESTRINGIDO</div><h1 className="admin-title">Panel administrativo</h1><p style={{fontSize:13,color:'#77766d',lineHeight:1.7}}>Ingresa con el usuario autorizado por la parroquia para administrar la programación, noticias y galería.</p><form onSubmit={submit}><label>Correo electrónico<input type="email" autoComplete="username" required value={email} onChange={e=>setEmail(e.target.value)} /></label><label>Contraseña<input type="password" autoComplete="current-password" required value={password} onChange={e=>setPassword(e.target.value)} /></label>{error&&<p className="error">{error}</p>}<button className="admin-button" disabled={busy}>{busy?'Ingresando…':'Iniciar sesión'}</button></form><p style={{fontSize:11,color:'#888',marginTop:22}}>La cuenta se crea desde Supabase Authentication. No hay registro público.</p></div></main>
+}
