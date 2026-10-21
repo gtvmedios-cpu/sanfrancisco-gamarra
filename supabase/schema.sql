@@ -54,3 +54,32 @@ create policy "Authenticated admins manage gallery" on public.gallery for all to
 create index if not exists events_published_starts_at_idx on public.events (published, starts_at);
 create index if not exists news_published_published_at_idx on public.news (published, published_at desc);
 create index if not exists gallery_published_created_at_idx on public.gallery (published, created_at desc);
+
+-- Almacenamiento público de imágenes de noticias y galería.
+-- Ejecuta esta sección también si las tablas ya estaban creadas.
+insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
+values ('site-media', 'site-media', true, 8388608, array['image/jpeg','image/png','image/webp','image/gif'])
+on conflict (id) do update set
+  public = excluded.public,
+  file_size_limit = excluded.file_size_limit,
+  allowed_mime_types = excluded.allowed_mime_types;
+
+drop policy if exists "Public can view site media" on storage.objects;
+create policy "Public can view site media" on storage.objects
+  for select to public using (bucket_id = 'site-media');
+
+drop policy if exists "Admins can upload site media" on storage.objects;
+create policy "Admins can upload site media" on storage.objects
+  for insert to authenticated
+  with check (bucket_id = 'site-media' and (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin');
+
+drop policy if exists "Admins can update site media" on storage.objects;
+create policy "Admins can update site media" on storage.objects
+  for update to authenticated
+  using (bucket_id = 'site-media' and (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin')
+  with check (bucket_id = 'site-media' and (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin');
+
+drop policy if exists "Admins can delete site media" on storage.objects;
+create policy "Admins can delete site media" on storage.objects
+  for delete to authenticated
+  using (bucket_id = 'site-media' and (auth.jwt() -> 'app_metadata' ->> 'role') = 'admin');

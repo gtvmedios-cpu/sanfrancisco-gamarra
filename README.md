@@ -62,13 +62,13 @@ git push -u origin main
 - Abre `/admin/login` en tu dominio.
 - Entra con el usuario con rol `admin`.
 - En **Programación**, agrega el título, fecha y hora local de Colombia, lugar y descripción.
-- En **Noticias**, agrega título, resumen, texto e URL pública de imagen.
-- En **Galería**, agrega título, URL pública de imagen y pie de foto.
+- En **Noticias**, agrega título, resumen, texto y, si quieres, selecciona una imagen desde el computador o celular. También puedes pegar una URL pública.
+- En **Galería**, selecciona una fotografía desde el dispositivo o pega una URL pública, y agrega el título y pie de foto.
 - Marca **Publicar inmediatamente** para que se muestre en la página pública. Si no está marcado, queda como borrador.
 - La fecha/hora se guarda con zona horaria del navegador. Al introducirla, selecciona la hora local de Colombia.
 
 ## 6. Imágenes
-Las imágenes de noticias y galería deben tener una URL HTTPS pública y estable. Para la portada se usa una fotografía de fondo de Unsplash como imagen temporal; puedes reemplazar la URL en `app/globals.css` por una imagen autorizada de San Francisco o de la reliquia. Verifica derechos de uso y evita presentar una imagen ilustrativa como fotografía real de la reliquia.
+Las imágenes que se cargan desde el panel se almacenan en el bucket público `site-media` de Supabase Storage. Se aceptan JPG, PNG, WEBP y GIF de hasta 8 MB. El archivo `supabase/schema.sql` crea el bucket y configura políticas para que cualquier visitante pueda ver las imágenes y solo administradores autenticados con `app_metadata.role = admin` puedan subir, actualizar o borrar archivos. También se puede usar una URL HTTPS pública. Para la portada se usa una fotografía de fondo de Unsplash como imagen temporal; puedes reemplazar la URL en `app/globals.css` por una imagen autorizada de San Francisco o de la reliquia. Verifica derechos de uso y evita presentar una imagen ilustrativa como fotografía real de la reliquia.
 
 ## Estructura
 ```text
@@ -91,7 +91,7 @@ supabase/schema.sql        Tablas, índices y políticas RLS
 - No existe formulario de inscripción, conforme a lo solicitado.
 - No habilites registro público de usuarios; crea cuentas administrativas manualmente.
 - Asigna `app_metadata.role = admin` solo a personas autorizadas.
-- Las imágenes se guardan como URL, no se cargan directamente al almacenamiento de Supabase en esta versión.
+- Las imágenes subidas desde el panel se almacenan en Supabase Storage; la base de datos guarda su URL pública.
 - Haz pruebas con un elemento borrador y otro publicado antes de anunciar el enlace.
 - La programación se muestra vacía hasta que la parroquia incorpore y publique los horarios oficiales. No se inventaron horarios ni lugares.
 
