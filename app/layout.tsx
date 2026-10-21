@@ -12,12 +12,12 @@ const emblemUrl = 'https://i.ibb.co/DHK3vcBK/88ee063a-fe45-4a46-a092-a226465ca87
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Visita de la Reliquia de San Francisco de Asís a Gamarra 2026',
-    template: '%s | Visita de la Reliquia de San Francisco de Asís',
+    default: 'Peregrinación de la reliquia de San Francisco de Asís a Gamarra, Cesar',
+    template: '%s | Peregrinación de la reliquia de San Francisco de Asís a Gamarra, Cesar',
   },
   description:
     'Información oficial sobre la visita de la reliquia de San Francisco de Asís a Gamarra, Cesar, Colombia, del 2 al 4 de noviembre de 2026. Invitación, programación, noticias y galería.',
-  applicationName: 'Visita de la Reliquia de San Francisco de Asís a Gamarra',
+  applicationName: 'Peregrinación de la reliquia de San Francisco de Asís a Gamarra, Cesar',
   keywords: [
     'Visita de la Reliquia de San Francisco de Asís',
     'San Francisco de Asís en Gamarra',
@@ -40,15 +40,15 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_CO',
     url: siteUrl,
-    siteName: 'Visita de la Reliquia de San Francisco de Asís a Gamarra',
-    title: 'Visita de la Reliquia de San Francisco de Asís a Gamarra | 2 al 4 de noviembre de 2026',
+    siteName: 'Peregrinación de la reliquia de San Francisco de Asís a Gamarra, Cesar',
+    title: 'Peregrinación de la reliquia de San Francisco de Asís a Gamarra, Cesar',
     description:
       'Conoce la invitación, programación y noticias de la visita de la reliquia de San Francisco de Asís a Gamarra, Cesar, del 2 al 4 de noviembre de 2026.',
     images: [{ url: emblemUrl, width: 1200, height: 1200, type: 'image/jpeg', alt: 'Emblema oficial de la visita de la reliquia de San Francisco de Asís a Gamarra' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Visita de la Reliquia de San Francisco de Asís a Gamarra 2026',
+    title: 'Peregrinación de la reliquia de San Francisco de Asís a Gamarra, Cesar',
     description: 'Toda la información de la visita del 2 al 4 de noviembre de 2026 en Gamarra, Cesar.',
     images: [emblemUrl],
   },
