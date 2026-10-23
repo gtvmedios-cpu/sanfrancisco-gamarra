@@ -156,3 +156,25 @@
 .article-image-count{display:flex;align-items:center;gap:8px;color:#8b7044;font-size:12px;margin:25px 0}
 .article-content>.button{display:inline-flex;align-items:center;gap:8px;margin-top:22px}
 @media(max-width:600px){.article-content{padding-top:25px;padding-bottom:50px}.article-image-grid{grid-template-columns:1fr}.article-image-grid figure:first-child:nth-last-child(odd){grid-column:auto}.article-image-grid figure{max-height:390px}.article-content h1{font-size:39px}}
+
+/* Portadas de noticias: encuadre consistente, imagen completa y mejor jerarquía visual */
+.news-card{display:flex;flex-direction:column;overflow:hidden;border-radius:3px;transition:transform .22s ease,box-shadow .22s ease}
+.news-card:hover{transform:translateY(-3px);box-shadow:0 15px 34px rgba(61,45,29,.11)}
+.news-cover{position:relative;display:block;width:100%;aspect-ratio:16/9;overflow:hidden;background:#e8dfd0}
+.news-cover>img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .4s ease}
+.news-cover:hover>img{transform:scale(1.035)}
+.news-cover-label{position:absolute;left:14px;bottom:14px;background:rgba(41,53,43,.92);color:#fff8e9;padding:7px 10px;font-size:9px;letter-spacing:1.5px}
+.news-placeholder{height:100%;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px}
+.news-placeholder span{font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.news-body{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:22px}
+.news-card h3{line-height:1.35}
+.news-card h3 a:hover{color:#987747}
+.news-card p{margin:0 0 14px;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.news-card small{margin-top:auto;padding-top:5px}
+.article-cover{position:relative;margin:30px 0 36px;overflow:hidden;background:#e9dfcf;border:1px solid #e5d8c4;box-shadow:0 14px 38px rgba(61,45,29,.10)}
+.article-cover img{display:block;width:100%;height:clamp(260px,48vw,560px);object-fit:contain;background:#eee7dc}
+.article-cover figcaption{padding:12px 16px;background:#fffdf8;color:#81715d;font-size:11px;line-height:1.6;border-top:1px solid #e8dfd0}
+.article-image-grid{align-items:stretch}
+.article-image-grid figure{border:1px solid #e8dfd0;min-height:0;aspect-ratio:4/3}
+.article-image-grid img{max-height:none;object-fit:cover}
+@media(max-width:600px){.news-body{padding:18px}.news-cover{aspect-ratio:16/10}.article-cover{margin:24px 0}.article-cover img{height:auto;max-height:420px;min-height:220px;object-fit:contain}.article-image-grid figure{aspect-ratio:4/3}}
