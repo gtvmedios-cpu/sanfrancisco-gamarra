@@ -136,3 +136,11 @@ La página principal incluye enlaces a ambas subpáginas y el sitemap las anunci
 ## Actualización del emblema oficial
 
 El emblema principal, los logotipos de cabecera y pie de página, el favicon y las imágenes de metadatos usan el nuevo logo proporcionado por la organización: https://i.ibb.co/DHK3vcBK/88ee063a-fe45-4a46-a092-a226465ca87e.jpg. La imagen se sirve desde ese enlace externo.
+
+## Noticias con páginas independientes y álbumes
+- Cada noticia obtiene un `slug` único y una URL propia con formato `/noticias/mi-noticia-xxxx`. Al abrirla se muestra el título, resumen, contenido completo, fecha y todas las imágenes relacionadas.
+- En **Panel administrativo → Noticias**, se pueden seleccionar varias imágenes en una sola carga. La primera será la portada y las restantes se mostrarán dentro de la página de la noticia.
+- En **Panel administrativo → Galería**, se pueden cargar fotos individuales o escribir un nombre de álbum para agrupar varias fotos. Si se deja el nombre del álbum vacío, las fotos se publican individualmente.
+- El sitemap incluye las noticias publicadas para facilitar su indexación.
+
+**Importante para actualizar una instalación existente:** antes de desplegar este cambio, abre Supabase → SQL Editor y ejecuta el archivo completo `supabase/schema.sql` de esta versión. El script añade las columnas y tablas de noticias/álbumes que hacen falta y configura sus políticas RLS. Haz una copia de seguridad si ya tienes contenido importante.

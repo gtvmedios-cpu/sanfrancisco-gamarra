@@ -14,6 +14,7 @@ create table if not exists public.events (
 create table if not exists public.news (
   id uuid primary key default gen_random_uuid(),
   title text not null check (char_length(title) <= 160),
+  slug text,
   summary text not null default '',
   body text not null default '',
   image_url text not null default '',
@@ -22,18 +23,48 @@ create table if not exists public.news (
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+-- Imágenes adicionales asociadas a cada noticia.
+create table if not exists public.news_images (
+  id uuid primary key default gen_random_uuid(),
+  news_id uuid not null references public.news(id) on delete cascade,
+  image_url text not null,
+  alt_text text not null default '',
+  sort_order integer not null default 0,
+  created_at timestamptz not null default now()
+);
+
+-- Álbumes de la galería; cada foto sigue siendo una fila individual.
+create table if not exists public.gallery_albums (
+  id uuid primary key default gen_random_uuid(),
+  title text not null check (char_length(title) <= 160),
+  description text not null default '',
+  published boolean not null default false,
+  created_at timestamptz not null default now()
+);
+
 create table if not exists public.gallery (
   id uuid primary key default gen_random_uuid(),
   title text not null check (char_length(title) <= 160),
   image_url text not null,
   caption text not null default '',
+  album_id uuid references public.gallery_albums(id) on delete set null,
   published boolean not null default false,
   created_at timestamptz not null default now()
 );
 
+-- Migraciones seguras para instalaciones existentes.
+alter table public.news add column if not exists slug text;
+alter table public.gallery add column if not exists album_id uuid references public.gallery_albums(id) on delete set null;
+update public.news set slug = trim(both '-' from regexp_replace(lower(translate(title, 'áéíóúüñÁÉÍÓÚÜÑ', 'aeiouunAEIOUUN')), '[^a-z0-9]+', '-', 'g')) || '-' || left(id::text, 8) where slug is null or slug = '';
+create unique index if not exists news_slug_unique_idx on public.news(slug);
+create index if not exists news_images_news_sort_idx on public.news_images(news_id, sort_order);
+create index if not exists gallery_album_idx on public.gallery(album_id);
+
 alter table public.events enable row level security;
 alter table public.news enable row level security;
 alter table public.gallery enable row level security;
+alter table public.news_images enable row level security;
+alter table public.gallery_albums enable row level security;
 
 -- Lectura pública solo de elementos publicados. No se permite escritura anónima.
 drop policy if exists "Public can read published events" on public.events;
@@ -42,6 +73,15 @@ drop policy if exists "Public can read published news" on public.news;
 create policy "Public can read published news" on public.news for select to anon, authenticated using (published = true);
 drop policy if exists "Public can read published gallery" on public.gallery;
 create policy "Public can read published gallery" on public.gallery for select to anon, authenticated using (published = true);
+
+drop policy if exists "Public can read published news images" on public.news_images;
+create policy "Public can read published news images" on public.news_images for select to anon, authenticated using (exists (select 1 from public.news n where n.id = news_id and n.published = true));
+drop policy if exists "Admins manage news images" on public.news_images;
+create policy "Admins manage news images" on public.news_images for all to authenticated using ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin') with check ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin');
+drop policy if exists "Public can read published gallery albums" on public.gallery_albums;
+create policy "Public can read published gallery albums" on public.gallery_albums for select to anon, authenticated using (published = true);
+drop policy if exists "Admins manage gallery albums" on public.gallery_albums;
+create policy "Admins manage gallery albums" on public.gallery_albums for all to authenticated using ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin') with check ((auth.jwt() -> 'app_metadata' ->> 'role') = 'admin');
 
 -- Solo usuarios autenticados pueden administrar el contenido. Crea usuarios solo para administradores autorizados.
 drop policy if exists "Authenticated admins manage events" on public.events;

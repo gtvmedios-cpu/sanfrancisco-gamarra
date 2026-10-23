@@ -133,3 +133,26 @@
 .hero h1{max-width:850px}
 .hero-lead{font-size:16px}
 @media(max-width:760px){.hero h1{font-size:clamp(39px,11vw,52px)}}
+
+/* Noticias con página propia y álbumes de fotografías */
+.news-read-more{display:inline-flex;align-items:center;gap:6px;margin-top:12px;color:#967644;font-size:11px;font-weight:700;text-decoration:none;letter-spacing:.3px}
+.news-read-more:hover{text-decoration:underline}
+.gallery-album{margin:28px 0 36px}
+.gallery-album-heading{margin:0 0 15px;padding:0 0 12px;border-bottom:1px solid var(--line)}
+.gallery-album-heading h3{font-family:'Playfair Display',serif;font-size:26px;font-weight:500;color:#553a2d;margin:0 0 5px}
+.gallery-album-heading p{font-size:12px;color:var(--muted);margin:0;line-height:1.7}
+.article-page{min-height:100vh;background:#fbf8f1}
+.article-content{max-width:900px;padding-top:42px;padding-bottom:80px}
+.article-back{display:inline-flex;align-items:center;gap:8px;margin-bottom:26px;color:#8b7044;font-size:12px;text-decoration:none}
+.article-content h1{font-family:'Playfair Display',serif;font-size:clamp(38px,6vw,64px);font-weight:500;line-height:1.1;letter-spacing:-1px;color:#392a21;margin:14px 0 18px}
+.article-date{display:flex;align-items:center;gap:8px;color:#88765d;font-size:12px}
+.article-summary{font-family:'Playfair Display',serif;font-size:clamp(19px,2.5vw,25px);line-height:1.6;color:#6d5a47;margin:25px 0 30px}
+.article-image-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:28px 0 34px}
+.article-image-grid figure{margin:0;background:#eee5d6;overflow:hidden;min-height:180px}
+.article-image-grid figure:first-child:nth-last-child(odd){grid-column:1/-1}
+.article-image-grid img{display:block;width:100%;height:100%;max-height:560px;object-fit:cover}
+.article-body{font-size:16px;line-height:1.95;color:#4f463d;white-space:normal}
+.article-body p{margin:0 0 20px}
+.article-image-count{display:flex;align-items:center;gap:8px;color:#8b7044;font-size:12px;margin:25px 0}
+.article-content>.button{display:inline-flex;align-items:center;gap:8px;margin-top:22px}
+@media(max-width:600px){.article-content{padding-top:25px;padding-bottom:50px}.article-image-grid{grid-template-columns:1fr}.article-image-grid figure:first-child:nth-last-child(odd){grid-column:auto}.article-image-grid figure{max-height:390px}.article-content h1{font-size:39px}}
