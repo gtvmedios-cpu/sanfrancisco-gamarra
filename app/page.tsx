@@ -25,11 +25,30 @@ export default async function Home() {
         <div className="invitation-signoff"><Heart size={17}/><span>¡Toda la comunidad está cordialmente invitada!</span></div>
       </div>
     </section>
+    <section className="live-section section wrap" id="senal-en-vivo" aria-labelledby="live-title">
+      <div className="section-heading"><div><div className="section-kicker">TRANSMISIÓN ESPECIAL</div><h2 id="live-title">La visita en vivo</h2></div><p>Acompaña desde cualquier lugar la llegada y las celebraciones de la reliquia de San Francisco de Asís a Gamarra.</p></div>
+      <div className="live-player"><iframe src="https://new.opencaster.com/player/embed?user=ENTREFAMOSOSTV" title="Señal en vivo de la peregrinación de San Francisco de Asís a Gamarra" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen loading="lazy" referrerPolicy="strict-origin-when-cross-origin"/><div className="live-player-caption"><span className="live-dot"/> TRANSMISIÓN EN DIRECTO · ENTREFAMOSOSTV</div></div>
+    </section>
+    <section className="coverage-section section wrap" id="medios" aria-labelledby="coverage-title">
+      <div className="section-heading"><div><div className="section-kicker">COBERTURA Y ACOMPAÑAMIENTO</div><h2 id="coverage-title">Medios de comunicación</h2></div><p>Canales y emisoras que acompañan el cubrimiento de esta visita de fe.</p></div>
+      <div className="media-group"><h3><span/> Canales de televisión</h3><div className="media-logos media-tv">
+        <a className="media-logo" href="https://gamarra-tv.vercel.app" target="_blank" rel="noopener noreferrer"><img src="https://i.ibb.co/gGgdZ6x/Chat-GPT-Image-14-may-2026-18-57-48.png" alt="Gamarra TV"/><span>Gamarra TV</span></a>
+        <a className="media-logo" href="https://canal-del-rio.vercel.app/" target="_blank" rel="noopener noreferrer"><img src="https://canal-del-rio.vercel.app/_next/image?url=%2Fimages%2Flogo-header.png&w=1920&q=75" alt="Canal del Río"/><span>Canal del Río</span></a>
+        <a className="media-logo" href="https://www.influencersdelsenor.com/" target="_blank" rel="noopener noreferrer"><img src="https://www.influencersdelsenor.com/logo-influencers-del-senor.png" alt="Influencers del Señor TV"/><span>Influencers del Señor TV</span></a>
+        <a className="media-logo" href="#medios"><img src="https://i.ibb.co/xPhVMZ5/3dfe9250-0ff1-40b7-9881-ddedb589adbe.png" alt="Tigre Teve"/><span>Tigre Teve</span></a>
+        <a className="media-logo" href="#medios"><img src="https://cdn.phototourl.com/member/2026-11-02-d208064d-5e41-42ff-b082-41fe3ec34a7f.png" alt="San Alberto TV"/><span>San Alberto TV</span></a>
+      </div></div>
+      <div className="media-group"><h3><span/> Emisoras de radio</h3><div className="media-logos media-radio">
+        <a className="media-logo" href="#senal-en-vivo"><img src="https://cdn.phototourl.com/member/2026-11-02-cad0d6d9-079a-4958-9e9c-184b2288a562.png" alt="Gamarra TV Radio"/><span>Gamarra TV Radio</span></a>
+        <a className="media-logo" href="https://www.influencersdelsenor.com/" target="_blank" rel="noopener noreferrer"><img src="https://www.influencersdelsenor.com/logo-influencers-del-senor.png" alt="Influencers del Señor Emisora Online"/><span>Influencers del Señor · Online</span></a>
+        <a className="media-logo" href="#senal-en-vivo"><img src="https://cdn.phototourl.com/member/2026-11-02-7efbaba6-c674-417f-985d-3f187b642567.png" alt="San Alberto TV Radio"/><span>San Alberto TV Radio</span></a>
+      </div></div>
+    </section>
     <section className="partners-section section wrap" aria-labelledby="partners-title">
       <div className="section-heading partners-heading"><div><div className="section-kicker">COMUNIDAD Y ACOMPAÑAMIENTO</div><h2 id="partners-title">Una peregrinación que nos reúne</h2></div><p>Invitan la Parroquia Inmaculada Concepción de Gamarra, Cesar, y la Comunidad Franciscana, Provincia de la Santa Fe. Gamarra TV acompaña esta experiencia como medio de comunicación local.</p></div>
       <div className="partners-grid">
-        <div className="partner-card"><div className="partner-logo"><img src="https://i.ibb.co/MkcbKGDh/GAMARRA-TV.png" alt="Logo de la Parroquia Inmaculada Concepción de Gamarra, Cesar" loading="lazy"/></div><h3>Parroquia Inmaculada Concepción</h3><p>Gamarra, Cesar</p><span>COMUNIDAD PARROQUIAL</span></div>
-        <div className="partner-card"><div className="partner-logo"><img src="https://i.ibb.co/m5dDDqbZ/4c2ab800-ce30-48a6-aa55-824c6f93000b.png" alt="Logo de la Comunidad Franciscana, Provincia de la Santa Fe" loading="lazy"/></div><h3>Comunidad Franciscana</h3><p>Provincia de la Santa Fe</p><span>ESPIRITUALIDAD FRANCISCANA</span></div>
+        <div className="partner-card"><div className="partner-logo"><img src="https://cdn.phototourl.com/member/2026-11-02-4dcbe73a-2ee4-4f79-a7db-9af364715015.png" alt="Logo oficial de la Parroquia Inmaculada Concepción de Gamarra, Cesar" loading="lazy"/></div><h3>Parroquia Inmaculada Concepción</h3><p>Gamarra, Cesar</p><span>COMUNIDAD PARROQUIAL</span></div>
+        <div className="partner-card"><div className="partner-logo"><img src="https://cdn.phototourl.com/member/2026-11-02-9eb61647-47bf-46ea-b644-6da863321b7c.png" alt="Logo oficial de la Comunidad Franciscana, Provincia de la Santa Fe" loading="lazy"/></div><h3>Comunidad Franciscana</h3><p>Provincia de la Santa Fe</p><span>ESPIRITUALIDAD FRANCISCANA</span></div>
         <div className="partner-card"><div className="partner-logo"><img src="https://i.ibb.co/gGgdZ6x/Chat-GPT-Image-14-may-2026-18-57-48.png" alt="Logo de Gamarra TV" loading="lazy"/></div><h3>Gamarra TV</h3><p>Medio de comunicación local</p><span>CREACIÓN Y APOYO DIGITAL</span></div>
       </div>
     </section>
