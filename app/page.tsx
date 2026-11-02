@@ -27,7 +27,7 @@ export default async function Home() {
     </section>
     <section className="live-section section wrap" id="senal-en-vivo" aria-labelledby="live-title">
       <div className="section-heading"><div><div className="section-kicker">TRANSMISIÓN ESPECIAL</div><h2 id="live-title">La visita en vivo</h2></div><p>Acompaña desde cualquier lugar la llegada y las celebraciones de la reliquia de San Francisco de Asís a Gamarra.</p></div>
-      <div className="live-player"><iframe src="https://new.opencaster.com/player/embed?user=ENTREFAMOSOSTV" title="Señal en vivo de la peregrinación de San Francisco de Asís a Gamarra" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen loading="lazy" referrerPolicy="strict-origin-when-cross-origin"/><div className="live-player-caption"><span className="live-dot"/> TRANSMISIÓN EN DIRECTO · ENTREFAMOSOSTV</div></div>
+      <div className="live-player"><iframe src="https://new.opencaster.com/player/embed?user=ENTREFAMOSOSTV" title="Señal en vivo de la peregrinación de San Francisco de Asís a Gamarra" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen loading="lazy" referrerPolicy="strict-origin-when-cross-origin"/><div className="live-player-caption"><span className="live-dot"/> TRANSMISIÓN EN DIRECTO</div></div>
     </section>
     <section className="coverage-section section wrap" id="medios" aria-labelledby="coverage-title">
       <div className="section-heading"><div><div className="section-kicker">COBERTURA Y ACOMPAÑAMIENTO</div><h2 id="coverage-title">Medios de comunicación</h2></div><p>Canales y emisoras que acompañan el cubrimiento de esta visita de fe.</p></div>
